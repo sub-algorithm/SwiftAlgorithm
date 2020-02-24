@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BB069ECF23FEA2D700DD159F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB069ECE23FEA2D700DD159F /* main.swift */; };
-		BB069EDC23FEA30000DD159F /* SwiftAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB069EDB23FEA30000DD159F /* SwiftAlgorithmTests.swift */; };
+		BB2CF0582403BCAD005157AA /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF0572403BCAD005157AA /* BinaryTree.swift */; };
+		BB2CF05A2403BD48005157AA /* BinaryTreeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF0592403BD48005157AA /* BinaryTreeTestCase.swift */; };
+		BB2CF05C2403C014005157AA /* TreeVisualizationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF05B2403C014005157AA /* TreeVisualizationExtension.swift */; };
+		BB2CF05D2403C08A005157AA /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF0572403BCAD005157AA /* BinaryTree.swift */; };
+		BB2CF05E2403C091005157AA /* TreeVisualizationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF05B2403C014005157AA /* TreeVisualizationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +31,10 @@
 		BB069ECB23FEA2D700DD159F /* SwiftAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB069ECE23FEA2D700DD159F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BB069ED923FEA30000DD159F /* SwiftAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB069EDB23FEA30000DD159F /* SwiftAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgorithmTests.swift; sourceTree = "<group>"; };
 		BB069EDD23FEA30000DD159F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB2CF0572403BCAD005157AA /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		BB2CF0592403BD48005157AA /* BinaryTreeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeTestCase.swift; sourceTree = "<group>"; };
+		BB2CF05B2403C014005157AA /* TreeVisualizationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeVisualizationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		BB069ECD23FEA2D700DD159F /* SwiftAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				BB2CF0562403BC92005157AA /* Tree */,
 				BB069ECE23FEA2D700DD159F /* main.swift */,
 			);
 			path = SwiftAlgorithm;
@@ -78,10 +85,19 @@
 		BB069EDA23FEA30000DD159F /* SwiftAlgorithmTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB069EDB23FEA30000DD159F /* SwiftAlgorithmTests.swift */,
 				BB069EDD23FEA30000DD159F /* Info.plist */,
+				BB2CF0592403BD48005157AA /* BinaryTreeTestCase.swift */,
 			);
 			path = SwiftAlgorithmTests;
+			sourceTree = "<group>";
+		};
+		BB2CF0562403BC92005157AA /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				BB2CF0572403BCAD005157AA /* BinaryTree.swift */,
+				BB2CF05B2403C014005157AA /* TreeVisualizationExtension.swift */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2CF05C2403C014005157AA /* TreeVisualizationExtension.swift in Sources */,
+				BB2CF0582403BCAD005157AA /* BinaryTree.swift in Sources */,
 				BB069ECF23FEA2D700DD159F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB069EDC23FEA30000DD159F /* SwiftAlgorithmTests.swift in Sources */,
+				BB2CF05E2403C091005157AA /* TreeVisualizationExtension.swift in Sources */,
+				BB2CF05D2403C08A005157AA /* BinaryTree.swift in Sources */,
+				BB2CF05A2403BD48005157AA /* BinaryTreeTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
