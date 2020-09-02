@@ -26,10 +26,12 @@ extension BinaryNode {
         rightChild?.traverseInOrder(visit: visit)
     }
     
-    func traversePreOrder(visit: (Element) -> Void) {
-           visit(value)
-           leftChild?.traversePreOrder(visit: visit)
-           rightChild?.traversePreOrder(visit: visit)
+    func traversePreOrder(visit: (Element?) -> Void) {
+        visit(value)
+        if let leftChild = leftChild { leftChild.traversePreOrder(visit: visit) }
+        else { visit(nil) }
+        if let rightChild = rightChild { rightChild.traversePreOrder(visit: visit) }
+        else { visit(nil) }
        }
     
     func traversePostOrder(visit: (Element) -> Void) {
@@ -37,4 +39,31 @@ extension BinaryNode {
         rightChild?.traversePostOrder(visit: visit)
         visit(value)
     }
+    
+    func serialize() -> [Element?] {
+        var array: [Element?] = []
+        self.traversePreOrder { array.append($0)}
+        return array
+    }
+    
 }
+
+class Tree {
+    
+    static func deserialize<Element>(_ array: inout [Element?]) -> BinaryNode<Element>? {
+        guard let value = array.removeLast() else {
+            return nil
+        }
+        let node = BinaryNode(value: value)
+        node.leftChild = deserialize(&array)
+        node.rightChild = deserialize(&array)
+        return node
+      }
+
+    static func deserialize<Element>(_ array: [Element?]) -> BinaryNode<Element>? {
+        var reversed = Array(array.reversed())
+        return deserialize(&reversed)
+    }
+    
+}
+
